@@ -2,7 +2,7 @@
 
 > Article by Nikhilesh Kumar (Robotics and Facilities System Engineer, Dubai) on an automated environment, health and safety (EHS) statutory compliance tracker for a residential high-rise, built entirely on Microsoft 365 (Excel Online, OneDrive, Power Automate, Outlook). Excel calculates expiry dates and an alert status for every test, certificate and contract; one Power Automate flow per building system runs daily at 8:00 AM and emails contractors a consolidated, colour-coded HTML table.
 
-Key facts: 8 building systems (water tanks, water features, swimming pools, HVAC, lifts, facade access/BMU, fire systems incl. Civil Defence AMC and Hassantuk, grease traps); 6 alert levels (Requested, Urgent, Alert, each with a daily follow-up); pause rules for On Hold, scheduled visits and report turnaround; automatic Report Overdue emails; AED 0 additional software cost.
+Key facts: 8 building systems (water tanks, water features, swimming pools, HVAC, lifts, facade access/BMU, fire systems incl. Civil Defence AMC and Hassantuk, grease traps); 6 alert levels (Requested, Urgent, Alert, each with a daily follow-up); pause rules for On Hold, scheduled visits and report turnaround; automatic Report Overdue emails; AED 0 additional software cost. Live since the first week of July 2026 with zero errors to date.
 
 ## Article
 - [Nothing expires unnoticed](https://nikhilesh-003.github.io/ehs-tracker-blog/): full article with architecture, inputs, escalation ladder, daily decision logic, email format, results and FAQ
