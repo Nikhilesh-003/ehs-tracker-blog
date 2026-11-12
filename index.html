@@ -185,17 +185,28 @@ strong{font-weight:600}
 .gate.final{border-color:var(--accent)}
 @media (max-width:600px){.gate{grid-template-columns:1fr}}
 
-/* email mock */
-.mail{margin:26px 0;border:1px solid var(--rule);border-radius:4px;background:var(--panel);overflow:hidden;font-size:.95rem}
-.mail-head{padding:12px 16px;border-bottom:1px solid var(--rule);display:grid;gap:3px;font-family:var(--font-mono);font-size:.76rem;color:var(--muted)}
-.mail-head b{color:var(--ink);font-weight:600}
-.mail-head .subj{font-family:var(--font-display);font-size:1.08rem;color:var(--ink);font-weight:600;margin-top:4px}
-.mail-body{padding:14px 16px 16px}
-.mail-body p{margin:0 0 12px;line-height:1.55}
-.mail-body table{border-collapse:collapse;width:100%;margin:4px 0 14px;font-size:.88rem}
-.mail-body th{background:var(--accent);color:#fff;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:8px 10px;font-weight:600}
-.mail-body td{padding:8px 10px;border-bottom:1px solid var(--rule)}
-.mail-body .sig{font-family:var(--font-mono);font-size:.74rem;color:var(--muted);margin:0}
+
+/* screenshots */
+.shot{margin:0}
+.shot .frame{border:1px solid var(--rule);border-radius:4px;background:#fff;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px -10px rgba(0,0,0,.18)}
+.shot .bar{display:flex;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--rule);background:#FAFAF8;font-family:var(--font-mono);font-size:.7rem;color:var(--muted)}
+.shot .bar i{width:9px;height:9px;border-radius:50%;background:var(--rule);display:inline-block}
+.shot .bar span{margin-left:6px}
+.shot img{display:block;width:100%;height:auto}
+.flow{max-width:640px;margin:0 auto;width:100%}
+.flow .frame{padding:12px;background:#fff}
+.pair{display:grid;grid-template-columns:1fr;gap:18px}
+.pair.wb{justify-items:center}
+.pair.wb figure{width:100%}
+.pair.wb figure:first-child{max-width:642px}.pair.wb figure:last-child{max-width:462px}
+@media (max-width:600px){.shot.wide .frame{overflow-x:auto}.shot.wide img{width:720px;max-width:none}.shot.wide figcaption::after{content:" Swipe sideways to read the email."}}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tabs button{font:600 .7rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;padding:8px 11px;border-radius:3px;border:1px solid var(--rule);background:var(--panel);color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{border-color:currentColor}
+.tabs button.t-alr[aria-selected="true"]{color:var(--alr);background:var(--alr-soft)}
+.tabs button.t-ok[aria-selected="true"]{color:var(--ok);background:var(--ok-soft)}
+.tabs button.t-sch[aria-selected="true"]{color:var(--sch);background:var(--sch-soft)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0}
@@ -345,19 +356,19 @@ footer{border-top:1px solid var(--rule);padding-block:32px 56px;display:grid;gap
         <span class="sn">03 · Scope</span>
         <h2>Eight building systems, one tracker</h2>
         <div class="tbl"><table>
-          <thead><tr><th>System</th><th>Tests or certificates tracked</th><th>Contractor</th></tr></thead>
+          <thead><tr><th>System</th><th>Tests or certificates tracked (validity)</th><th>Contractor</th></tr></thead>
           <tbody>
-            <tr><td>Water tanks</td><td>Tank cleaning, microbiological test, Legionella test</td><td>Water-testing laboratory</td></tr>
-            <tr><td>Water features</td><td>Microbiological test, Legionella test</td><td>Water-testing laboratory</td></tr>
-            <tr><td>Swimming pools</td><td>Microbiological test, Legionella test</td><td>Water-testing laboratory</td></tr>
-            <tr><td>HVAC</td><td>Microbiological test, Legionella test</td><td>Water-testing laboratory</td></tr>
-            <tr><td>Lifts</td><td>Maintenance contract renewal (24 lifts)</td><td>Lift contractor</td></tr>
-            <tr><td>Facade access (BMU)</td><td>Maintenance contract renewal</td><td>BMU contractor</td></tr>
-            <tr><td>Fire systems</td><td>Civil Defence AMC agreement, Hassantuk monitoring</td><td>Fire and life-safety contractor</td></tr>
+            <tr><td>Water tanks</td><td>Tank cleaning (6 months), microbiological test (2 months), Legionella test (3 months)</td><td>Water-testing laboratory</td></tr>
+            <tr><td>Water features</td><td>Microbiological test (2 months), Legionella test (3 months)</td><td>Water-testing laboratory</td></tr>
+            <tr><td>Swimming pools</td><td>Microbiological test (2 months), Legionella test (3 months)</td><td>Water-testing laboratory</td></tr>
+            <tr><td>HVAC</td><td>Chilled water and cooling towers: microbiological test (2 to 3 months), Legionella test (3 months)</td><td>Water-testing laboratory</td></tr>
+            <tr><td>Lifts</td><td>Maintenance contract and third-party inspection for 24 lifts (6 months)</td><td>Lift contractor</td></tr>
+            <tr><td>Facade access (BMU)</td><td>Maintenance contract, including fall-arrest and abseil rails (6 months)</td><td>BMU contractor</td></tr>
+            <tr><td>Fire systems</td><td>Civil Defence AMC certificate (12 months), Hassantuk certificate (12 months)</td><td>Fire and life-safety contractor</td></tr>
             <tr><td>Grease traps</td><td>Service contract renewal</td><td>Grease-trap contractor</td></tr>
           </tbody>
         </table></div>
-        <p>Each test type has its own reminder lead time. Contracts get a single renewal reminder 15 days out. Water tests use lead times matched to how long the laboratory needs to sample and report. Each system has its own table and its own flow, so <strong>a problem in one never stops the others</strong>.</p>
+        <p>Every cycle is different. A water tank alone has three tests on three different clocks. Each test type also has its own reminder lead time. Contracts get a single renewal reminder 15 days out. Water tests use lead times matched to how long the laboratory needs to sample and report. Each system has its own table and its own flow, so <strong>a problem in one never stops the others</strong>.</p>
       </section>
 
       <section id="arch">
@@ -420,36 +431,75 @@ footer{border-top:1px solid var(--rule);padding-block:32px 56px;display:grid;gap
           <div class="gate" role="listitem"><span class="q">Was this row <b>already emailed today</b>?</span><span class="pill p-ok">Skip</span></div>
           <div class="gate final" role="listitem"><span class="q">Add the row to that contractor's email, send, and <b>stamp today's date</b> on the row.</span><span class="pill p-sch">Send</span></div>
         </div>
-        <p>The <strong>Report Overdue</strong> case gets its own email because the request is different: the contractor has done the site visit, and what's missing is paperwork. Sending them the usual "please arrange a visit" email would only cause confusion.</p>
+        <p>The full flow, as it runs for every table in the workbook each morning:</p>
+      </section>
+      </article>
+
+      <figure class="shot flow">
+        <div class="frame"><a href="images/flowchart.png"><img src="images/flowchart.png" alt="Flowchart of the daily run: the team enters a date, Excel calculates expiry and alert type, Power Automate runs at 8 AM and reads every row. Each row passes On Hold, Scheduled, Awaiting Report and Report Overdue checks, branches on its alert type (Requested, Follow-up Requested, Urgent, Follow-up Urgent, Alert, Follow-up Alert or OK), skips if already notified today, otherwise builds the HTML table, sends the email, stamps the last-notified date and moves to the next row and table" width="1079" height="1738" loading="lazy"></a></div>
+        <figcaption>The tracker's flowchart. Yellow boxes are decisions, coloured boxes are the alert types. The weekly Monday dashboard on the left is the next addition. Select the image to open it at full size.</figcaption>
+      </figure>
+
+      <article>
+      <section>
+        <p>The pause states appear in the workbook itself. Enter a contractor's visit date and the row turns <span class="pill p-sch">Scheduled</span>. Record that a sample was collected and it shows <span class="pill p-awt">Awaiting report</span> until the report comes in.</p>
+      </section>
+      </article>
+
+      <div class="pair wb">
+        <figure class="shot">
+          <div class="frame"><img src="images/workbook-scheduled.png" alt="Excel table with a Contractor Scheduled Date column and an Alert Type column: rows with a 6-Jul-2026 visit date show Scheduled, others show OK" width="642" height="102" loading="lazy"></div>
+          <figcaption>A visit date entered: those rows switch to Scheduled and stop sending reminders.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="images/workbook-awaiting-report.png" alt="Excel table with a Sample Collected column and an Alert Type column: rows with a 3-Jul-2026 sample date show Awaiting Report" width="462" height="78" loading="lazy"></div>
+          <figcaption>A sample collected: the row waits quietly for the lab report.</figcaption>
+        </figure>
+      </div>
+
+      <article>
+      <section>
+        <p>If the report doesn't arrive in time, the row moves to <strong>Report Overdue</strong>, which gets its own email because the request is different. The contractor has already been on site, and what's missing is paperwork. Sending them the usual "please arrange a visit" email would only cause confusion.</p>
+      </section>
+      </article>
+
+      <figure class="shot wide">
+        <div class="frame"><div class="bar"><i></i><i></i><i></i><span>Report Overdue · swimming pool</span></div><img src="images/email-report-overdue.png" alt="Email body: Action Required, Report Overdue. Water samples were collected for the Microbiological Test at the swimming pool but the test report has not been received beyond the expected turnaround of 4 days. Table row: Zone C, Zone D, swimming pool tower CD, expiry 19-Jun-2026, status Report Overdue in purple" width="1038" height="290" loading="lazy"></div>
+        <figcaption>A real Report Overdue email, sent automatically four days after sample collection. It asks for the report, not another visit.</figcaption>
+      </figure>
+
+      <article>
+      <section>
         <div class="insight"><p>Knowing when <em>not</em> to send matters as much as sending. Each pause rule removes a type of email that would have taught contractors to ignore the tracker.</p></div>
       </section>
 
       <section id="email">
         <span class="sn">08 · Output</span>
         <h2>One clear email per system</h2>
-        <p>Rather than one message per area, every affected area of a system is grouped into a single table, colour-coded by urgency, with a subject line that names the system and the action needed.</p>
-        <div class="mail" role="img" aria-label="Recreated sample email: subject Water Tanks, Microbiological Test, Action Required, with a table of three areas, their expiry dates and statuses Alert, Alert and Requested">
-          <div class="mail-head">
-            <span>To: <b>Water-testing laboratory</b></span>
-            <span>From: <b>Building Management</b> · 08:00</span>
-            <span class="subj">Water Tanks: Microbiological Test, Action Required</span>
-          </div>
-          <div class="mail-body">
-            <p>Dear Team,</p>
-            <p>The following areas require Microbiological Test attention:</p>
-            <table>
-              <thead><tr><th>Zone</th><th>Area</th><th>Expiry</th><th>Status</th></tr></thead>
-              <tbody>
-                <tr><td>Z-A</td><td>Tower A · basement</td><td>08 Nov</td><td><span class="pill p-alr">Alert</span></td></tr>
-                <tr><td>Z-B</td><td>Tower B · rooftop</td><td>08 Nov</td><td><span class="pill p-alr">Alert</span></td></tr>
-                <tr><td>Z-C</td><td>Podium · rooftop</td><td>24 Nov</td><td><span class="pill p-req">Requested</span></td></tr>
-              </tbody>
-            </table>
-            <p>Kindly arrange a visit to collect water samples at the earliest and confirm the date with us.</p>
-            <p class="sig">Building Management Team · single point of contact for coordination</p>
-          </div>
+        <p>Rather than one message per area, every affected area of a system is grouped into a single table, colour-coded by urgency, with a subject line that names the system and the action needed. These are real emails sent by the tracker, showing only the body:</p>
+      </section>
+      </article>
+
+      <figure class="shot wide" id="mails">
+        <div class="tabs" role="tablist" aria-label="Example emails">
+          <button role="tab" class="t-alr" aria-selected="true" aria-controls="m1" id="tb1">Alert</button>
+          <button role="tab" class="t-ok" aria-selected="false" aria-controls="m2" id="tb2" tabindex="-1">Follow-up requested</button>
+          <button role="tab" class="t-alr" aria-selected="false" aria-controls="m3" id="tb3" tabindex="-1">Follow-up alert</button>
+          <button role="tab" class="t-sch" aria-selected="false" aria-controls="m4" id="tb4" tabindex="-1">HVAC follow-up</button>
         </div>
-        <p>Some systems add a column of their own. The HVAC email, for example, includes the system type next to each area. Follow-ups use the same layout with a "kind reminder" opening, so contractors can tell a first notice from a chase at a glance.</p>
+        <div class="frame">
+          <div class="bar"><i></i><i></i><i></i><span id="mailbar">Water Features · Legionella Test · Action Required</span></div>
+          <div role="tabpanel" id="m1" aria-labelledby="tb1" data-bar="Water Features · Legionella Test · Action Required"><img src="images/email-alert.png" alt="Email body: The following Water Feature areas require Legionella Test attention. Table row: Zone S, dancing water fountain, expiry 16-Jun-2026, status Alert in red. Kindly arrange to visit our site to collect water samples before the expiry dates" width="1038" height="270"></div>
+          <div role="tabpanel" id="m2" aria-labelledby="tb2" data-bar="Swimming Pool · Legionella Test · Kind Reminder" hidden><img src="images/email-follow-up-requested.png" alt="Email body: a kind reminder about the Legionella Test at the building's swimming pool. Table row on a green background: Zone C, Zone D, swimming pool tower CD, expiry 25-Jun-2026, status Follow Up Requested" width="1038" height="236" loading="lazy"></div>
+          <div role="tabpanel" id="m3" aria-labelledby="tb3" data-bar="Swimming Pool · Legionella Test · Kind Reminder" hidden><img src="images/email-follow-up-alert.png" alt="Email body: a kind reminder about the Legionella Test at the building's swimming pool. Table row on a red background: Zone C, Zone D, swimming pool tower CD, expiry 09-Jun-2026, status Follow Up Alert" width="1038" height="236" loading="lazy"></div>
+          <div role="tabpanel" id="m4" aria-labelledby="tb4" data-bar="HVAC · Legionella Test · Kind Reminder" hidden><img src="images/email-hvac-follow-up.png" alt="Email body: a kind reminder about the Legionella Test for the HVAC system. Table with an extra System Type column: two rows of chilled water, expiry 24-Jun-2026, status Follow Up Reminder" width="1038" height="272" loading="lazy"></div>
+        </div>
+        <figcaption>Real emails from the tracker. Contact names, phone numbers, email addresses, the building name and internal zone codes have been removed.</figcaption>
+      </figure>
+
+      <article>
+      <section>
+        <p>The first notice asks the contractor to book a visit. Follow-ups open with "This is a kind reminder", so contractors can tell a first notice from a chase at a glance, and the row colour shows how urgent it is. Some systems add a column of their own: the HVAC email lists the system type, such as chilled water, next to each zone.</p>
       </section>
 
       <section id="results">
@@ -538,7 +588,7 @@ footer{border-top:1px solid var(--rule);padding-block:32px 56px;display:grid;gap
           <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/nikhilesh-kumar-bharathi/">nikhilesh-kumar-bharathi</a></dd></div>
           <div><dt>GitHub</dt><dd><a href="https://github.com/Nikhilesh-003">Nikhilesh-003</a></dd></div>
         </dl>
-        <p class="credits">Microsoft Excel Online · OneDrive · Power Automate · Outlook<br>The building, contractor and contact details are kept general. The status board and email shown are recreations using sample data.</p>
+        <p class="credits">Microsoft Excel Online · OneDrive · Power Automate · Outlook<br>The building, contractor and contact details are kept general. The status board at the top uses sample data. The email screenshots are real, with contact details, the building name and zone codes removed.</p>
       </footer>
     </main>
   </div>
@@ -553,6 +603,16 @@ footer{border-top:1px solid var(--rule);padding-block:32px 56px;display:grid;gap
     if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];if(a)a.classList.add('on')}
   })},{rootMargin:'-20% 0px -70% 0px'});
   Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
+})();
+</script>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('#mails [role=tab]'));
+  var bar=document.getElementById('mailbar');
+  function pick(t,focus){tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;
+    var p=document.getElementById(b.getAttribute('aria-controls'));p.hidden=!on;if(on&&bar)bar.textContent=p.getAttribute('data-bar')});if(focus)t.focus()}
+  tabs.forEach(function(b,i){b.addEventListener('click',function(){pick(b)});
+    b.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){e.preventDefault();pick(tabs[(i+d+tabs.length)%tabs.length],true)}})});
 })();
 </script>
 </body>
